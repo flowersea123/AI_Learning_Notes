@@ -12,15 +12,10 @@
 .
 ├── src/                  # 源代码目录
 │   ├── __init__.py      # 包初始化
-│   ├── main.py          # 主程序入口
-│   ├── tools_for_test.py # 编程练习辅助模块
 │   └── study1/          # 学习代码示例
+│       ├── DS_func.py   # 数据结构函数
 │       └── guess_number.py # 猜数字小游戏
-├── tests/               # 测试目录
-│   ├── __init__.py
-│   └── test_utils.py    # 单元测试
 ├── requirements.txt     # 依赖配置
-├── .gitignore           # Git忽略文件
 └── README.md            # 本文件
 ```
 
@@ -37,17 +32,17 @@ pip install -r requirements.txt
 
 ## 运行程序
 
+可以直接运行各个模块，例如：
+
 ```bash
-python -m src.main
+python -c "from src.study1.DS_func import binary_search; print(binary_search([1,2,3,4,5], 3))"
 ```
 
-如果需要运行练习代码（如猜数字）：
+或运行猜数字游戏：
 
 ```bash
 python -m src.study1.guess_number
 ```
-
-## 运行测试
 
 ```bash
 pytest tests/
