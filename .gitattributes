@@ -1,8 +1,12 @@
 # 自动识别文本和二进制文件
 * text=auto
+.gitattributes text eol=lf
+.gitignore text eol=lf
 
 # 文本文件统一使用 LF
 *.py text eol=lf
+# 核心文件保持现有 CRLF 换行，避免重新检出时改变字节内容
+src/study1/DS_func.py text eol=crlf
 *.md text eol=lf
 *.txt text eol=lf
 *.json text eol=lf

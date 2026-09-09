@@ -1,81 +1,61 @@
-# AI 学习笔记
+# DS_func
 
-这是一个记录 AI 学习与练习过程的 Python 项目，主要用来整理知识点、实践算法和积累项目经验。
+本仓库以 [`src/study1/DS_func.py`](src/study1/DS_func.py) 为核心，保存一组基础数据结构与算法实现。核心文件保留其现有代码、注释、编码和换行格式，不在仓库整理过程中修改。
 
-- 作者：内地大一学生
-- 目标：构建可运行、可测试的学习型代码仓库
-- 主要技术栈：Python、pytest、black、pylint
+## 内容
 
-## 项目结构
+`DS_func.py` 不导入第三方库，也没有命令行入口或顶层执行逻辑。它公开以下类和函数：
 
+| 名称 | 代码可确认的行为 |
+| --- | --- |
+| `ListNode` | 保存 `val` 和 `next` 的单链表节点 |
+| `binary_search(nums, target)` | 在升序序列中查找目标值，返回索引或 `-1` |
+| `bubble_sort(nums)` | 尝试原地升序排序，并返回同一个列表 |
+| `reverse_linked_list(head)` | 原地反转单链表链接并返回新表头 |
+| `length_of_linked_list(head)` | 返回链表节点数 |
+| `is_valid_parentheses(s)` | 检查圆括号、方括号和花括号是否匹配；忽略其他字符 |
+| `Queue` | 基于列表和前端索引实现的先进先出队列 |
+| `merge_sort(nums, l, r)` | 原地归并排序半开区间 `[l, r)`，并返回列表 |
+| `merge(nums, l, r, m)` | 合并两个相邻的有序半开区间 `[l, m)` 和 `[m, r)` |
+| `factorial(n)` | 递归计算非负整数的阶乘 |
+| `quick_sort(nums, l, r)` | 原地快速排序实现；返回 `None` |
+
+## 环境与依赖
+
+- Python 3（最低兼容版本：待补充）
+- 第三方运行依赖：无
+
+无需安装 `requirements.txt`。建议在项目根目录运行示例和测试，以便 Python 能找到 `src.study1.DS_func`。
+
+## 使用示例
+
+```python
+from src.study1.DS_func import binary_search, merge_sort
+
+numbers = [1, 3, 5, 7]
+position = binary_search(numbers, 5)
+
+values = [4, 1, 3, 2]
+merge_sort(values, 0, len(values))
 ```
-.
-├── src/                  # 源代码目录
-│   ├── __init__.py      # 包初始化
-│   └── study1/          # 学习代码示例
-│       ├── DS_func.py   # 数据结构函数
-│       └── guess_number.py # 猜数字小游戏
-├── requirements.txt     # 依赖配置
-└── README.md            # 本文件
-```
 
-## 环境准备
+`DS_func.py` 本身只定义 API，直接运行文件不会输出结果。
 
-建议使用虚拟环境：
+## 测试
+
+测试仅使用 Python 标准库，不会发起网络请求、写入外部系统或修改真实数据：
 
 ```bash
-python -m venv .venv
-source .venv/Scripts/activate  # Windows
-# 或 macOS/Linux: source .venv/bin/activate
-pip install -r requirements.txt
+python -m unittest discover -s tests -v
 ```
 
-## 运行程序
+## 已知限制
 
-可以直接运行各个模块，例如：
-
-```bash
-python -c "from src.study1.DS_func import binary_search; print(binary_search([1,2,3,4,5], 3))"
-```
-
-或运行猜数字游戏：
-
-```bash
-python -m src.study1.guess_number
-```
-
-```bash
-pytest tests/
-```
-
-或使用 unittest:
-
-```bash
-python -m unittest discover -s tests -p "test_*.py"
-```
-
-## 代码检查与格式化
-
-```bash
-# 代码格式化
-black src/ tests/
-
-# 静态分析
-pylint src/
-```
-
-## 贡献指南
-
-欢迎提交 Issue 或 PR：
-
-1. Fork 本仓库
-2. 新建分支: `feat/xxx` 或 `fix/xxx`
-3. 完成功能/修复并补充测试
-4. 提交 PR 并描述修改内容
+- 函数没有统一的类型注解或参数校验；调用方需要满足各函数的输入前提。
+- `bubble_sort` 当前循环边界可能使部分未排序输入无法被完整排序。
+- `quick_sort` 的边界参数约定没有在原文件中明确说明，且部分短区间不会被处理。修改这些行为需要改动核心文件，因此本次整理不修复。
+- 项目的作者、背景和目标使用场景：待补充。
 
 ## 许可证
 
-MIT License，详见 `LICENSE`（若不存在，可根据需要添加）。
-
-> 以上内容均由AI生成。
-
+待补充：仓库目前没有可核验的 `LICENSE` 文件，请由维护者确认许可证后再添加。

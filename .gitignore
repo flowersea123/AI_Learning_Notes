@@ -41,12 +41,12 @@ env/
 .DS_Store
 Thumbs.db
 
-# pytest
+# Tests and coverage
 .pytest_cache/
 .coverage
 htmlcov/
 
-# mypy
+# Type checking
 .mypy_cache/
 .dmypy.json
 dmypy.json
