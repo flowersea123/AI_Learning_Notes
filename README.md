@@ -1,31 +1,31 @@
 # DS_func
 
-本仓库以 [`src/study1/DS_func.py`](src/study1/DS_func.py) 为核心，保存一组基础数据结构与算法实现。核心文件保留其现有代码、注释、编码和换行格式，不在仓库整理过程中修改。
+本仓库以 [`dsad/DS_func.py`](src/study1/DS_func.py) 为核心，保存一组基础数据结构与算法实现。核心文件保留其现有代码、注释、编码和换行格式，不在仓库整理过程中修改。
 
 ## 内容
 
 `DS_func.py` 不导入第三方库，也没有命令行入口或顶层执行逻辑。它公开以下类和函数：
 
-| 名称 | 代码可确认的行为 |
-| --- | --- |
-| `ListNode` | 保存 `val` 和 `next` 的单链表节点 |
-| `binary_search(nums, target)` | 在升序序列中查找目标值，返回索引或 `-1` |
-| `bubble_sort(nums)` | 尝试原地升序排序，并返回同一个列表 |
-| `reverse_linked_list(head)` | 原地反转单链表链接并返回新表头 |
-| `length_of_linked_list(head)` | 返回链表节点数 |
-| `is_valid_parentheses(s)` | 检查圆括号、方括号和花括号是否匹配；忽略其他字符 |
-| `Queue` | 基于列表和前端索引实现的先进先出队列 |
-| `merge_sort(nums, l, r)` | 原地归并排序半开区间 `[l, r)`，并返回列表 |
-| `merge(nums, l, r, m)` | 合并两个相邻的有序半开区间 `[l, m)` 和 `[m, r)` |
-| `factorial(n)` | 递归计算非负整数的阶乘 |
-| `quick_sort(nums, l, r)` | 原地快速排序实现；返回 `None` |
+| 名称                            | 代码可确认的行为                                   |
+| ------------------------------- | -------------------------------------------------- |
+| `ListNode`                    | 保存`val` 和 `next` 的单链表节点               |
+| `binary_search(nums, target)` | 在升序序列中查找目标值，返回索引或`-1`           |
+| `bubble_sort(nums)`           | 尝试原地升序排序，并返回同一个列表                 |
+| `reverse_linked_list(head)`   | 原地反转单链表链接并返回新表头                     |
+| `length_of_linked_list(head)` | 返回链表节点数                                     |
+| `is_valid_parentheses(s)`     | 检查圆括号、方括号和花括号是否匹配；忽略其他字符   |
+| `Queue`                       | 基于列表和前端索引实现的先进先出队列               |
+| `merge_sort(nums, l, r)`      | 原地归并排序半开区间`[l, r)`，并返回列表         |
+| `merge(nums, l, r, m)`        | 合并两个相邻的有序半开区间`[l, m)` 和 `[m, r)` |
+| `factorial(n)`                | 递归计算非负整数的阶乘                             |
+| `quick_sort(nums, l, r)`      | 原地快速排序实现；返回`None`                     |
 
 ## 环境与依赖
 
 - Python 3（最低兼容版本：待补充）
 - 第三方运行依赖：无
 
-无需安装 `requirements.txt`。建议在项目根目录运行示例和测试，以便 Python 能找到 `src.study1.DS_func`。
+无需安装 `requirements.txt`。建议在项目根目录运行示例和测试，以便 Python 能找到 `dsad.DS_func`。
 
 ## 使用示例
 
